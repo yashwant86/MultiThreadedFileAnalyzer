@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    // If your class is not in a package:
+    mainClass = 'MultiThreadedFileAnalyzer'
+
+    // OR if it’s in a package like 'analyzer', use:
+    // mainClass = 'analyzer.MultiThreadedFileAnalyzer'
+}

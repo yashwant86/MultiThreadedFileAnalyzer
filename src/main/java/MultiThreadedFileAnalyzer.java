@@ -1,8 +1,8 @@
-package main.java;
 
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
+
 
 public class MultiThreadedFileAnalyzer {
 
@@ -54,7 +54,7 @@ public class MultiThreadedFileAnalyzer {
 		}
 	}
 
-	private static FileAnalysisResult analyzeFile(File file, String keyword) throws IOException {
+	public static FileAnalysisResult analyzeFile(File file, String keyword) throws IOException {
 		int wordCount = 0;
 		int keywordOccurrences = 0;
 		String longestWord = "";
@@ -80,33 +80,3 @@ public class MultiThreadedFileAnalyzer {
 	}
 }
 
-// Helper class to store analysis results
-class FileAnalysisResult {
-	private final String fileName;
-	private final int wordCount;
-	private final int keywordOccurrences;
-	private final String longestWord;
-
-	public FileAnalysisResult(String fileName, int wordCount, int keywordOccurrences, String longestWord) {
-		this.fileName = fileName;
-		this.wordCount = wordCount;
-		this.keywordOccurrences = keywordOccurrences;
-		this.longestWord = longestWord;
-	}
-
-	public String getFileName() {
-		return fileName;
-	}
-
-	public int getWordCount() {
-		return wordCount;
-	}
-
-	public int getKeywordOccurrences() {
-		return keywordOccurrences;
-	}
-
-	public String getLongestWord() {
-		return longestWord;
-	}
-}

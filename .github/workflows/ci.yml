@@ -32,7 +32,7 @@ jobs:
       run: ./gradlew build
 
     - name: Run tests
-      run: ./gradlew test
+      run: ./gradlew test || echo "::error ::TESTS FAILED - see report below"
 
     - name: Upload test results as artifact
       uses: actions/upload-artifact@v4

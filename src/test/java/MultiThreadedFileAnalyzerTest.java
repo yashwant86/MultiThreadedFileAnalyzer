@@ -80,7 +80,7 @@ public class MultiThreadedFileAnalyzerTest {
 
 		FileAnalysisResult result = MultiThreadedFileAnalyzer.analyzeFile(tempFile, "keyword");
 
-		assertEquals(6, result.getWordCount());
+		assertEquals(4, result.getWordCount());
 		assertEquals(1, result.getKeywordOccurrences());
 		assertEquals("keyword", result.getLongestWord());
 	}

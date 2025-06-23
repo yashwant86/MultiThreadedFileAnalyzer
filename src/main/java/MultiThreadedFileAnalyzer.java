@@ -63,6 +63,11 @@ public class MultiThreadedFileAnalyzer {
 			String line;
 			while ((line = reader.readLine()) != null) {
 				String[] words = line.split("\\s+");
+				for (String word: words){
+					if(word.trim().isEmpty()){
+						continue; // Skip empty lines
+					}
+				}
 				wordCount += words.length;
 
 				for (String word : words) {
